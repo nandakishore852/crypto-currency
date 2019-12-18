@@ -1,0 +1,26 @@
+/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans:400,700');
+:root {
+  --my-primary: #222831;
+  --my-grey: #393e46;
+  --my-blue: #00adb5;
+  --my-white: #eeeeee;
+}
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+body {
+  color: var(--my-primary);
+  background-color: var(--my-white);
+  font-family: 'Noto Sans', sans-serif;
+}
+.bg-primary-color {
+  background-color: var(--my-blue);
+}
+.custom-toggler.navbar-toggler {
+  border-color: rgb(34, 40, 49);
+}
+.custom-toggler .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(34, 40, 49, 0.5)' stroke-width='3' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+}

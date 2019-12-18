@@ -1,0 +1,42 @@
+h1 {
+    font-weight: 600;
+}
+.fa-heart {
+    color: #ccc;
+}
+
+.fa-heart.active {
+    color: red;
+}
+
+.mr-2-px {
+    margin-right: 3px;
+}
+
+.cursor-pointer {
+    cursor: pointer;
+}
+
+.b-2 {
+    margin-bottom: 2rem !important;
+}
+
+.t-2 {
+    margin-top: 2rem !important;
+}
+
+.l-2 {
+    margin-left: 4rem !important;
+}
+
+.l-4 {
+    margin-left: 18rem !important;
+}
+
+label {
+    font: 1.5em sans-serif;
+}
+
+.page-footer .footer-copyright {
+    background-color: #00adb5 !important;
+}

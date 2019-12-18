@@ -1,0 +1,38 @@
+<div *ngIf="favouriteCoin.length>0">
+    <div class="row" style="text-align: center">
+      <div class="col-lg-12">
+        <h2>Top Favourite Selected Cryptocurrencies </h2>
+      </div>
+    </div>
+  
+  
+    <div class="row" style="padding: 2%;">
+  
+      <div class="col-lg-12">
+        <table class="table table-bordered table-striped ">
+          <thead>
+            <tr>
+              <th scope="col">#</th>
+              <th scope="col">Name</th>
+              <th scope="col">Symbol</th>
+              <th scope="col" (click)="sort('quotes.USD.price')"> Current Price</th>
+              <th scope="col" (click)="sort('quotes.USD.market_cap')">Market Cap</th>
+  
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let items of favouriteCoin | orderBy: key : reverse | paginate: { itemsPerPage: 10, currentPage: p }; let i = index ">
+              <td>{{ i+1 }}</td>
+              <td>{{items.name}}</td>
+              <td>{{items.symbol}}</td>
+              <td>{{items.quotes.USD.price}}</td>
+              <td>{{items.quotes.USD.market_cap}}</td>
+            </tr>
+  
+          </tbody>
+  
+        </table>
+        <pagination-controls (pageChange)="p = $event" style="float: right"></pagination-controls>
+      </div>
+    </div>
+  </div>
