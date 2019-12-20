@@ -41,7 +41,7 @@ export class PriceChartComponent implements OnInit {
         text: 'Price Chart'
       },
       xAxis: {
-      type: 'Price Chart',
+      //type: 'Price Chart',
       title: {
         text: 'Coins'
       }
@@ -56,6 +56,7 @@ export class PriceChartComponent implements OnInit {
     },
     series: [{
       name: 'Price',
+      type: 'spline',
       data:  [{
         id: this.comparearray[0].symbol,
           name: this.comparearray[0].name,
@@ -63,7 +64,8 @@ export class PriceChartComponent implements OnInit {
       }]
     }, 
     {
-      name:"Volume_24h",
+      name:"Volume_24h" ,
+      type: 'spline',
       data: [{
         id: this.comparearray[0].symbol,
           name: this.comparearray[0].name,

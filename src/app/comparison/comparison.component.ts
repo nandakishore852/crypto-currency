@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { CurrencyService } from '../currency.service';
-import { Chart } from 'chart.js';
+import * as Chart from 'chart.js';
 
 @Component({
   selector: 'app-comparison',
@@ -43,7 +43,7 @@ export class ComparisonComponent implements OnInit {
      
       // get data against last updated time for both currency
       this.listService.getAllCurrency().subscribe(
-        data => {
+        (data: { data: any[]; }) => {
           this.allCurrency = data.data;
 
           for (let element in this.allCurrency) {
@@ -106,7 +106,7 @@ export class ComparisonComponent implements OnInit {
           this.drawCharts();
       
         },
-        error => {
+        (error: any) => {
           console.log(error);
         }
       );

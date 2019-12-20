@@ -36,7 +36,7 @@ export class FavouritesComponent implements OnInit {
           this.favouriteCoin = this.arr.filter((word) => this.myItem.includes(word.id));
         }
       },
-      error => {
+      (      error: any) => {
         console.log(error);
       }
     )
