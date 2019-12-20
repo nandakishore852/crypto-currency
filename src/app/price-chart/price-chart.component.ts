@@ -80,7 +80,7 @@ export class PriceChartComponent implements OnInit {
 
 
       },
-      (      error: { status: any; })=>{
+      (error: { status: any; })=>{
         console.log("Error");
         console.log(error.status);
             
