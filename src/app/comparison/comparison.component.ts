@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { CurrencyService } from '../currency.service';
-import * as Chart from 'chart.js';
+import { Chart } from 'chart.js';
 
 @Component({
   selector: 'app-comparison',
