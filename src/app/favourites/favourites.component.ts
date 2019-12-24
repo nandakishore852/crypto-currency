@@ -25,7 +25,7 @@ export class FavouritesComponent implements OnInit {
   ngOnInit() {
 
     this.listService.getAllCurrency().subscribe(
-      data => {
+      (data: { data: any[]; }) => {
         this.allCurrency = data.data;
         for (let element in this.allCurrency) {
           this.arr.push(this.allCurrency[element]);
@@ -36,7 +36,7 @@ export class FavouritesComponent implements OnInit {
           this.favouriteCoin = this.arr.filter((word) => this.myItem.includes(word.id));
         }
       },
-      (      error: any) => {
+      (error: any) => {
         console.log(error);
       }
     )

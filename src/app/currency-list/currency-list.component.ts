@@ -2,7 +2,7 @@ import { Component, EventEmitter, Output, OnInit } from '@angular/core';
 import { CurrencyService } from '../currency.service';
 import { LOCAL_STORAGE } from 'angular-webstorage-service';
 import { ActivatedRoute, Router } from '@angular/router';
-import 'hammerjs';
+//import 'hammerjs';
 
 @Component({
   selector: 'app-currency-list',
@@ -128,7 +128,7 @@ public checkboxdisplay() {
   }
 
   //navigate to price chart
-  public gopricechart(v) {
+  public gopricechart(v: any) {
     this.router.navigate(['/priceChart'],{ queryParams: {pc:v} });
 }
 

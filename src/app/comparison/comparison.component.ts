@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { CurrencyService } from '../currency.service';
 import { Chart } from 'chart.js';
+import { type } from 'os';
+import { chart } from 'highcharts';
 
 @Component({
   selector: 'app-comparison',
@@ -103,7 +105,7 @@ export class ComparisonComponent implements OnInit {
           this.date_2 = JSON.parse(localStorage.getItem(this.key));
 
           // call graph function for draw chart 
-          this.drawCharts();
+          this.drawCharts();  
       
         },
         (error: any) => {
@@ -113,12 +115,12 @@ export class ComparisonComponent implements OnInit {
     }, this.TIME_INTERVAL);
   }
  
-// chart for both static data static
+// chart for both static data 
   drawCharts() {
     this.chart1 = new Chart("canvas", {
       type: 'line',
       data: {
-        labels: [0,2,4,6,8,10,12,14,16,18,20,22],
+        labels: ["0,2,4,6,8,10,12,14,16,18,20,22"],   
         datasets: [{
           label: "First static data",
           data: [0, 10, 15, 42, 20, 30, 45,12,80,65,24,42],

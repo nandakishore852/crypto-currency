@@ -4,10 +4,11 @@ import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 
+
 import { AppComponent } from './app.component';
 import { ComparisonComponent } from './comparison/comparison.component';
 import { CurrencyListComponent } from './currency-list/currency-list.component';
-import { FavouritesComponent } from './favorites/favorites.component';
+import { FavouritesComponent } from './favourites/favourites.component';
 import { PriceChartComponent } from './price-chart/price-chart.component';
 import { CurrencyService } from './currency.service';
 
